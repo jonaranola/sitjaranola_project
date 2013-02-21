@@ -1,4 +1,10 @@
 #include "../include/project.h"
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+#include <stdio.h>
 
 using namespace std;
 project::project()
@@ -262,4 +268,149 @@ void project::summation_of_primes()
     return;
 
 }
+
+void project::largest_product_grid()
+{
+
+}
+
+void project::divisible_triangular_number()
+{
+    int temp=0;
+    int x=0, y=0;
+    int c = 0;
+    bool test=false;
+    while(test==false)
+    {
+        temp+=x;
+        for(int j=1;j<=temp; j++)
+        {
+            if(temp%j==0)
+            {
+
+                c++;
+            }
+
+        }
+            if(c>=500)
+            {
+                cout << temp;
+                test=true;
+                break;
+            }
+            else c = 0;
+    x++;
+
+}
+}
+
+void project::largest_sum()
+{
+
+}
+
+void project::longest_collatz_sequence()
+{
+    long n, largestcounter=0,num;
+
+        for(long a=2;a<=1000000;a++)
+        {
+        long counter=1;
+            for(n=a;n>1;)
+            {
+                if(n%2==0)
+                {
+                    n=n/2;
+                    counter++;
+                }
+                else
+                {
+                    n=3*n+1;
+                    counter++;
+                }
+            }
+
+            if(counter>largestcounter)
+            {
+                largestcounter=counter;
+                num=a;
+            }
+        }
+    cout<<num<<endl<<largestcounter<<endl;
+    return;
+
+}
+
+void project::diophantine_reciprocals_a()
+{
+
+}
+
+void project::power_digit_sum()
+{
+    ostringstream convert;
+    int summation = 0;
+
+    long long product=pow(2,1000);
+
+    convert << product;
+    string x = convert.str();
+    int x_range = x.length();
+    string y;
+    for(long long i = 0LL; i < x_range; i++)
+    {
+        y = x.at(i);
+        int z = 0;
+        stringstream(y) >> z;
+        summation+=z;
+
+    }
+    cout << summation << endl;
+
+
+}
+
+
+
+void project::number_letter_counts()
+{
+
+}
+
+void project::max_path_sum_one()
+{
+
+}
+
+void project::counting_sundays()
+{
+
+}
+
+void project::factorial_digit_sum()
+{
+    ostringstream convert;
+    int summation = 0;
+    long long product=1LL;
+    for(int i=1; i<=10; i++)
+    {
+        product*=i;
+    }
+    convert << product;
+    string x = convert.str();
+    int x_range = x.length();
+    string y;
+    for(int i = 0; i < x_range; i++)
+    {
+        y = x.at(i);
+        int z = 0;
+        stringstream(y) >> z;
+        summation+=z;
+
+    }
+    cout << summation << endl;
+
+
+}
+
 

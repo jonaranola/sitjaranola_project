@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1361339925 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<sstream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<stdio.h>
+
+1361338705 c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+	<iostream>
+
+1361338769 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<stdio.h>
+	"include/project.h"
+
