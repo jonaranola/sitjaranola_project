@@ -18,3 +18,23 @@
 	<stdio.h>
 	"include/project.h"
 
+1361523148 source:c:\documents and settings\florence\my documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<stdio.h>
+	"include/project.h"
+
+1361523147 c:\documents and settings\florence\my documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+	<iostream>
+
+1361544662 source:c:\documents and settings\florence\my documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<sstream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<vector>
+	<stdio.h>
+
