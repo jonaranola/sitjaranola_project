@@ -1,7 +1,8 @@
 #ifndef PROJECT_H
 #define PROJECT_H
 #include <iostream>
-
+#include <string>
+#include <string.h>
 class project
 {
     public:
@@ -18,6 +19,7 @@ class project
         void special_pytho_triplet();
         void summation_of_primes();
         void largest_product_grid();
+            bool Prime_check(long num);
         void divisible_triangular_number();
         void largest_sum();
         void longest_collatz_sequence();
@@ -27,6 +29,8 @@ class project
         void max_path_sum_one();
         void counting_sundays();
         void factorial_digit_sum();
+
+
     protected:
     private:
 };
