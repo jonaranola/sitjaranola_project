@@ -29,6 +29,7 @@ class project
         void max_path_sum_one();
         void counting_sundays();
         void factorial_digit_sum();
+        void name_scores();
 
 
     protected:

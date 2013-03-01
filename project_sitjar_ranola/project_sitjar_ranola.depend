@@ -1,17 +1,21 @@
 # depslib dependency file v1.0
-1361339925 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+1361852829 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
 	"../include/project.h"
 	<iostream>
+	<fstream>
 	<sstream>
 	<string>
 	<cstdlib>
 	<cmath>
+	<vector>
 	<stdio.h>
 
-1361338705 c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+1361841836 c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
 	<iostream>
+	<string>
+	<string.h>
 
-1361338769 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
+1361841854 source:c:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
 	<iostream>
 	<string>
 	<cstdlib>
@@ -33,6 +37,52 @@
 1361544662 source:c:\documents and settings\florence\my documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
 	"../include/project.h"
 	<iostream>
+	<sstream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<vector>
+	<stdio.h>
+
+1361841854 source:d:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<stdio.h>
+	"include/project.h"
+
+1361841836 d:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+	<iostream>
+	<string>
+	<string.h>
+
+1361853008 source:d:\users\ranola\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<vector>
+	<stdio.h>
+
+1361841854 source:c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<stdio.h>
+	"include/project.h"
+
+1361841836 c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+	<iostream>
+	<string>
+	<string.h>
+
+1361853008 source:c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<fstream>
 	<sstream>
 	<string>
 	<cstdlib>

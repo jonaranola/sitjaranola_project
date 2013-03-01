@@ -1,5 +1,6 @@
 #include "../include/project.h"
 #include <iostream>
+#include <fstream>
 #include <sstream>
 #include <string>
 #include <cstdlib>
@@ -820,4 +821,73 @@ void project::factorial_digit_sum() // Problem 20
         summation += array[j];
     }
         cout << "The sum is: " << summation <<endl;
+}
+
+void project::name_scores() // Problem 21
+{
+    string numbers[5163];
+    char alphabet[26]={'A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+    string line;
+    int product=0;
+    long summation=0;
+    string y;
+    string x;
+    int z = 0;
+    ifstream myfile;
+    myfile.open("46k.txt");
+    while(myfile.good())
+    {
+        getline(myfile, line, ',');
+        x = line;
+        numbers[z]=x;
+        z++;
     }
+    for(int p=0; p<5163; p++)
+    {
+        for(int r=0; r<5163; r++)
+        {
+            if(numbers[r]>numbers[p])
+            {
+                y=numbers[r];
+                numbers[r]=numbers[p];
+                numbers[p]=y;
+            }
+        }
+
+
+    }
+    for(int i = 0; i < 5163; i++)
+    {
+        int range_n = numbers[i].length();
+        string temp_n = "";
+        for(int j = 0; j < range_n; j++)
+        {
+            if(numbers[i].at(j) == '"') continue;
+
+            temp_n += numbers[i].at(j);
+        }
+        numbers[i] = temp_n;
+    }
+
+    for(int i=0; i<5163; i++)
+    {
+        int range_nl = numbers[i].length();
+        int sumdigits=0;
+        for(int j = 0; j < range_nl; j++)
+        {
+            for(int k=0; k<26; k++)
+            {
+                if(numbers[i].at(j)== alphabet[k])
+                {
+                    sumdigits+=k+1;
+
+                }
+            }
+        }
+        product=sumdigits*(i+1);
+        summation+=product;
+
+    }
+   cout << "The name score summation is " << summation << endl;
+
+}
