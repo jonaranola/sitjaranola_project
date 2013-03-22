@@ -1006,7 +1006,7 @@ int project::power(int a, int b)
     }
     return r;
 }
-void project::truncable_primes() // Problem 22
+void project::truncable_primes() // Problem 23
 {
  int count=0,z=0;
     int i;
