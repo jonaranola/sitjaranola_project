@@ -62,6 +62,7 @@ void project:: largest_prime_factor()// Problem 3
     long long y=600851475143LL;
     long long largest=0LL;
     long long x=2LL;
+    cout << "This might take a minute. -- computing..." << endl;
 
     while(x<y)
     {
@@ -120,7 +121,7 @@ void project:: smallest_multiple() // Problem 5
     int y=0;
     int lowest;
     int x=2;
-
+    cout << "This might take a minute. -- computing..." << endl;
     while(x<1000000000)
         {
 
@@ -164,6 +165,7 @@ void project::thou1st_prime() // Problem 7
     int highest=0;
     int x=2;
     bool test;
+    cout << "This might take a minute. -- computing..." << endl;
 
     for(int z=0; z<10001; z++)
     {
@@ -195,7 +197,7 @@ void project::thou1st_prime() // Problem 7
 
 void project::largest_product_in_series() // Problem 8
 {
-     string thousands="7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450";
+    string thousands="7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450";
     long p=1, digits, highest=0, i;
     const char* a=thousands.c_str();
     for (p=0; p<995; p++)
@@ -249,6 +251,7 @@ void project::special_pytho_triplet() // Problem 9
 void project::summation_of_primes() // Problem 10
 {
     int summation=0;
+    cout << "This might take a minute. -- computing..." << endl;
 
         for (int y=2; y<=2000000; y++)
         {
@@ -271,7 +274,8 @@ void project::summation_of_primes() // Problem 10
 
 }
 
-bool project::Prime_check(long num){
+bool project::Prime_check(long num)
+{
      bool Prime_check = true;
      for (int i=2; i<= round(sqrt(num)) && Prime_check; i++)
      {
@@ -391,8 +395,9 @@ void project::largest_product_grid()// Problem 11
 void project::divisible_triangular_number() // Problem 12
 {
     int i,j,counter,max,ans;
-  ans=0;
-  max=0;
+    ans=0;
+    max=0;
+    cout << "This might take a minute. -- computing..." << endl;
   for(i=1;i<13000;i++)
     {
     ans=ans+i;
@@ -889,5 +894,105 @@ void project::name_scores() // Problem 21
 
     }
    cout << "The name score summation is " << summation << endl;
+
+}
+void project::first_1000_digit_fibonacci() // Problem 22
+{
+    cout << "No code." << endl;
+}
+int project::isprime(int n)
+{
+    int i;
+    if(n==1)
+        return(0);
+    for(i=2;i<n/2+1;i++)
+    {
+
+        if(n%i==0)
+        {
+            return(0);
+            break;
+        }
+    }
+    return(1);
+}
+int project::power(int a, int b)
+{
+    int r = 1;
+    int i=0;
+    for (i=0;i<b;i++){
+        r = r * a;
+    }
+    return r;
+}
+void project::truncable_primes() // Problem 22
+{
+ int count=0,z=0;
+    int i;
+    int n;
+    int z1=0;
+    int p;
+    int count1=0;
+    int digits;
+    int k=1000000;
+    int summation=0;
+    cout << "This might take a minute. -- computing..." << endl;
+    for(i=2;i<k;i++)
+    {
+        if(isprime(i)==1)
+        {
+            z = 0;
+            count = 0;
+            n=i;
+            p=i;
+            while(n>0)
+            {
+                n=n/10;
+                if(isprime(n)==1)
+                {
+                    count++;
+                }else{
+                    count = -1;
+                    break;
+                }
+                z++;
+            }
+
+            if(z==count)
+            {
+                z1= 0;
+                count1=0;
+                n = i;
+                p= i;
+                while(p>0)
+                {
+                    digits=n%power(10,z1+1);
+                    p = p /10;
+                    if (isprime(digits)==1)
+                    {
+                        count1++;
+                    }else{
+                        count1 =-1;
+                        break;
+                    }
+                    z1++;
+                }
+
+                if(z1==count1){
+                    if(i>10)
+                    {
+
+                        summation = summation+i;
+
+                    }
+
+                }
+
+
+            }
+        }
+    }
+
+    cout << "The summation is " << summation << endl;
 
 }

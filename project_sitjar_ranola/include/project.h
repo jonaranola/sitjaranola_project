@@ -30,7 +30,10 @@ class project
         void counting_sundays();
         void factorial_digit_sum();
         void name_scores();
-
+        void first_1000_digit_fibonacci();
+        int isprime(int n);
+        int power(int a, int b);
+        void truncable_primes();
 
     protected:
     private:
