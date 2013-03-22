@@ -74,12 +74,12 @@
 	<stdio.h>
 	"include/project.h"
 
-1363963433 c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
+1363965574 c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\include\project.h
 	<iostream>
 	<string>
 	<string.h>
 
-1363964464 source:c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
+1363965558 source:c:\users\jm\documents\github\sitjaranola_project\project_sitjar_ranola\src\project.cpp
 	"../include/project.h"
 	<iostream>
 	<fstream>

@@ -30,6 +30,8 @@ class project
         void counting_sundays();
         void factorial_digit_sum();
         void name_scores();
+        int convertCharToNum(char num1);
+        char convertNumToChar(int num1);
         void first_1000_digit_fibonacci();
         int isprime(int n);
         int power(int a, int b);

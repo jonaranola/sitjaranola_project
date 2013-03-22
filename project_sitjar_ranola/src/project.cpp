@@ -896,9 +896,90 @@ void project::name_scores() // Problem 21
    cout << "The name score summation is " << summation << endl;
 
 }
+int project::convertCharToNum(char num1)
+{
+    int num;
+    if(num1 == '1') num = 1;
+    else if(num1 == '2') num = 2;
+    else if(num1 == '3') num = 3;
+    else if(num1 == '4') num = 4;
+    else if(num1 == '5') num = 5;
+    else if(num1 == '6') num = 6;
+    else if(num1 == '7') num = 7;
+    else if(num1 == '8') num = 8;
+    else if(num1 == '9') num = 9;
+    else if(num1 == '0') num = 0;
+    return num;
+}
+char project::convertNumToChar(int num1)
+{
+    char num;
+    if(num1 == 1) num = '1';
+    else if(num1 == 2) num = '2';
+    else if(num1 == 3) num = '3';
+    else if(num1 == 4) num = '4';
+    else if(num1 == 5) num = '5';
+    else if(num1 == 6) num = '6';
+    else if(num1 == 7) num = '7';
+    else if(num1 == 8) num = '8';
+    else if(num1 == 9) num = '9';
+    else if(num1 == 0) num = '0';
+    return num;
+}
 void project::first_1000_digit_fibonacci() // Problem 22
 {
-    cout << "No code." << endl;
+    string present = "1";
+    string previous = "0";
+    string temp = present;
+    string temp_sum = "";
+
+    int carry = 0;
+    int term = 1;
+    int range_pt = present.length();
+    int range_pv = previous.length();
+    while (range_pt < 1000)
+    {
+        if(range_pt > range_pv)
+        {
+            for(int i = 0; i < range_pt - range_pv; i++)
+            {
+                previous = "0" + previous;
+            }
+            range_pv = previous.length();
+        }
+        for(int i = range_pt - 1; i >= 0; i--)
+        {
+            int num_a = convertCharToNum(present.at(i));
+            int num_b = convertCharToNum(previous.at(i));
+            int sum = num_a + num_b + carry;
+            carry = 0;
+
+            if(sum > 9)
+            {
+                int a = sum%10;
+                sum -= a;
+                carry = sum/10;
+                temp_sum = convertNumToChar(a) + temp_sum;
+            }
+            else
+            {
+                temp_sum = convertNumToChar(sum) + temp_sum;
+            }
+            if(carry != 0 && i == 0)
+            {
+                temp_sum = convertNumToChar(carry) + temp_sum;
+                carry = 0;
+            }
+        }
+        temp = present;
+        present = temp_sum;
+        previous = temp;
+        term++;
+        temp_sum = "";
+        range_pt = present.length();
+        range_pv = previous.length();
+    }
+    cout << term << endl;
 }
 int project::isprime(int n)
 {
